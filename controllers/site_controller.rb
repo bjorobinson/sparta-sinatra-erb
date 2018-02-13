@@ -38,6 +38,7 @@ class SiteController < Sinatra::Base
   #Index
   get '/books' do
     @title = "index"
+    @books = $books
     erb :'books/index'
   end
 
