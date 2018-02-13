@@ -12,8 +12,7 @@ class SiteController < Sinatra::Base
   end
 
   #dummy Data
-  $books[
-    {
+  $books = [{
       id: 0,
       title: "Illiad",
       body: "Illiad_Body"
@@ -29,5 +28,11 @@ class SiteController < Sinatra::Base
       body: "Poetic_Edda_Body"
     },
   ]
+
+  #Pages
+  #Landing Page
+  get '/' do
+    "Landing Page"
+  end
 
 end
