@@ -37,7 +37,7 @@ class SiteController < Sinatra::Base
 
   #Index
   get '/books' do
-    "Books Index Page"
+    erb :'books/index'
   end
 
   #New
