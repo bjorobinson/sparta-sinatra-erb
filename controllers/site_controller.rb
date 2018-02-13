@@ -37,17 +37,20 @@ class SiteController < Sinatra::Base
 
   #Index
   get '/books' do
+    @title = "index"
     erb :'books/index'
   end
 
   #New
   get '/books/new' do
+    @title = "New Book"
     erb :'books/new'
   end
 
   #Show
   get '/books/:id' do
     id = params[:id]
+    @title = "Show Books"
     erb :'books/show'
   end
 
@@ -69,6 +72,7 @@ class SiteController < Sinatra::Base
   #Edit
   get '/books/:id/edit' do
     id = params[:id]
+    @title = "Edit Books"
     erb :'books/edit'
   end
 end
