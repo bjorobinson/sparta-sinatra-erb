@@ -42,13 +42,13 @@ class SiteController < Sinatra::Base
 
   #New
   get '/books/new' do
-    "New Page"
+    erb :'books/new'
   end
 
   #Show
   get '/books/:id' do
     id = params[:id]
-    "Book id: #{id}"
+    erb :'books/show'
   end
 
   #Create
@@ -69,6 +69,6 @@ class SiteController < Sinatra::Base
   #Edit
   get '/books/:id/edit' do
     id = params[:id]
-    "Edit Book id: #{id}"
+    erb :'books/edit'
   end
 end
