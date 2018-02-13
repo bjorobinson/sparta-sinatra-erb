@@ -50,8 +50,9 @@ class SiteController < Sinatra::Base
 
   #Show
   get '/books/:id' do
-    id = params[:id]
+    id = params[:id].to_i
     @title = "Show Books"
+    @book = $books[id]
     erb :'books/show'
   end
 
