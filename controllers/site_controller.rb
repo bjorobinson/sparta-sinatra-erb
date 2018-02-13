@@ -73,8 +73,9 @@ class SiteController < Sinatra::Base
 
   #Edit
   get '/books/:id/edit' do
-    id = params[:id]
+    id = params[:id].to_i
     @title = "Edit Books"
+    @book = $books[id]
     erb :'books/edit'
   end
 end
