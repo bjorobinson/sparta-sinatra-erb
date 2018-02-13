@@ -35,4 +35,40 @@ class SiteController < Sinatra::Base
     "Landing Page"
   end
 
+  #Index
+  get '/books' do
+    "Books Index Page"
+  end
+
+  #New
+  get '/books/new' do
+    "New Page"
+  end
+
+  #Show
+  get '/books/:id' do
+    id = params[:id]
+    "Book id: #{id}"
+  end
+
+  #Create
+  post '/books' do
+    "Create"
+  end
+
+  #Update
+  put '/books' do
+    "Update"
+  end
+
+  #Delete
+  delete '/books/:id' do
+    "Delete"
+  end
+
+  #Edit
+  get '/books/:id/edit' do
+    id = params[:id]
+    "Edit Book id: #{id}"
+  end
 end
